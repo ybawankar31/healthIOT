@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from ui_file import Ui_MainWindow
+import threading
 
 class MainWin(QtWidgets.QMainWindow):
     def __init__(self):
