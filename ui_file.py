@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1800, 1200)
+        MainWindow.resize(1900, 1000)
         # MainWindow.setSizeGripEnabled(False)
         self.horizontalLayoutWidget = QtWidgets.QWidget(MainWindow)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(9, 10, 1800, 81))
