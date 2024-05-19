@@ -11,14 +11,37 @@ import adafruit_mlx90614
 
 from time import sleep
 
-i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
-mlx = adafruit_mlx90614.MLX90614(i2c)
+# i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
+# mlx = adafruit_mlx90614.MLX90614(i2c)
 
-ambientTemp = "{:.2f}".format(mlx.ambient_temperature)
-targetTemp = "{:.2f}".format(mlx.object_temperature)
+# ambientTemp = "{:.2f}".format(mlx.ambient_temperature)
+# targetTemp = "{:.2f}".format(mlx.object_temperature)
 
-sleep(1)
+# sleep(1)
 
-print("Ambient Temperature:", ambientTemp, "°C")
-print("Target Temperature:", targetTemp,"°C")
-  
+# print("Ambient Temperature:", ambientTemp, "°C")
+# print("Target Temperature:", targetTemp,"°C")
+#*********************************************************************************  
+import random
+import time
+from queue import Queue
+import threading
+
+#create a queue to store random number
+
+sensor_data_queue = Queue()
+
+def generate_sensor_data():
+    while True:
+        i2c = io.I2C(board.SCL, board.SDA, frequency=100000)
+        mlx = adafruit_mlx90614.MLX90614(i2c)
+
+        # ambientTemp = "{:.2f}".format(mlx.ambient_temperature)
+        targetTemp = "{:.2f}".format(mlx.object_temperature)
+        sensor_data_queue.put((targetTemp, time.time()), timeout= 3)
+        print(sensor_data_queue.get(timeout= 3))
+
+        time.sleep(1)
+
+thread1_sensor_pipeline = threading.Thread(target=generate_sensor_data)
+thread1_sensor_pipeline.start()

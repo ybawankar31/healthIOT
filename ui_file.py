@@ -118,8 +118,8 @@ class Ui_MainWindow(object):
         self.push.setText(_translate("MainWindow", "PUSH"))
         self.fetch.setText(_translate("MainWindow", "FETCH"))
 
-        self.temp_pc.setText(_translate("MainWindow", f"{temperature}"))
-        self.time_pc.setText(_translate("MainWindow", f"{time.ctime(time_)}"))
+        self.temp_pc.setText(_translate("MainWindow", f"Fetching"))
+        self.time_pc.setText(_translate("MainWindow", f"Fetching"))
         
         self.temp_pe.setText(_translate("MainWindow", f"{temperature}"))
         self.time_pe.setText(_translate("MainWindow", f"{time.ctime(time_)}"))
