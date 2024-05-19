@@ -40,6 +40,8 @@ def generate_sensor_data():
         targetTemp = "{:.2f}".format(mlx.object_temperature)
         sensor_data_queue.put((targetTemp, time.time()), timeout= 3)
         print(sensor_data_queue.get(timeout= 3))
+        print(type(sensor_data_queue))
+        break
 
         time.sleep(1)
 

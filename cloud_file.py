@@ -1,6 +1,6 @@
 import mysql.connector
 import time
-
+from sensor_code import sensor_data_queue
 
 db_host = "sql12.freesqldatabase.com"
 db_name = "sql12707409"
@@ -25,19 +25,18 @@ def cloud_engine():
     cursor = connection.cursor()
 
 
-    temp_ = 33434
-    time_ = time.time()
+    data_to_push = sensor_data_queue.get(timeout= 3)
     # print(time_)
-    data = [temp_, time_]
+    data = [sensor_data_queue.g, time_]
 
 
-    # sql_query = f"INSERT INTO temp_and_time (temp_instant, time_instant) VALUES (%s, %s); "  # Replace with your desired table
-    # cursor.execute(sql_query, data)
-    # connection.commit()
+    sql_query = f"INSERT INTO temp_and_time (temp_instant, time_instant) VALUES (%s, %s); "  # Replace with your desired table
+    cursor.execute(sql_query, data)
+    connection.commit()
 
 
-    sql_query = f"select * from temp_and_time;"
-    cursor.execute(sql_query)
+    # sql_query = f"select * from temp_and_time;"
+    # cursor.execute(sql_query)
 
     result = cursor.fetchall()
 
