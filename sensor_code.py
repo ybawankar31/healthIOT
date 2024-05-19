@@ -45,5 +45,3 @@ def generate_sensor_data():
 
         time.sleep(1)
 
-thread1_sensor_pipeline = threading.Thread(target=generate_sensor_data)
-thread1_sensor_pipeline.start()

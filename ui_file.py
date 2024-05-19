@@ -6,16 +6,10 @@ import threading
 from PyQt5.QtCore import QTime, Qt, QTimer
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-temperature = 45.454
-time_ = time.time()
+
 
 #******************************************************************
-from cloud_file import cloud_engine
 
-value = cloud_engine()
-
-for row in value:
-    print(row)
 
 #VALUES*************************************************************************
 

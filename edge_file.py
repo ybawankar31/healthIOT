@@ -1,10 +1,10 @@
 import mysql.connector
 import time
-from sensor_code import sensor_data_queue
+# from sensor_code import sensor_data_queue
 
 db_host = "localhost"
 db_name = "healthiot"
-db_user = "root@localhost"
+db_user = "root"
 db_password = "root"
 
 
@@ -26,7 +26,7 @@ def edge_engine():
         cursor = connection.cursor()
 
 
-        data_to_push = sensor_data_queue.get(timeout= 3)
+        data_to_push = 23324234
         time_to_push = time.time()
         # print(time_)
         data = [data_to_push, time_to_push]
