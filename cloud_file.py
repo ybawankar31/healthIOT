@@ -2,10 +2,10 @@ import mysql.connector
 import time
 
 
-db_host = "sql6.freesqldatabase.com"
-db_name = "sql6705813"
-db_user = "sql6705813"
-db_password = "U1FBjqe7kf"
+db_host = "sql12.freesqldatabase.com"
+db_name = "sql12707409"
+db_user = "sql12707409"
+db_password = "RGDhTdT1Iz"
 
 
 
