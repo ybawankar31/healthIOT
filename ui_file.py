@@ -45,9 +45,9 @@ class Ui_MainWindow(object):
         # Update the text of the clock labels with the formatted current time
         global time_
 
-        self.time_pc.setText(f"{time.ctime(time_)}")
-        self.time_pe.setText(f"{time.ctime(time_)}")
-        self.time_fc.setText(f"{time.ctime(value[0][1])}")
+        self.time_pc.setText(f"Updated")
+        self.time_pe.setText(f"Updated")
+        self.time_fc.setText(f"Updated")
         self.time_fe.setText("Nothing")
         time_ = time.time()
 

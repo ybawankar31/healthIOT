@@ -3,6 +3,7 @@ from ui_file import Ui_MainWindow
 import threading
 from cloud_file import *
 from sensor_code import *
+from edge_file import *
 
 class MainWin(QtWidgets.QMainWindow):
     def __init__(self):
@@ -36,7 +37,8 @@ if __name__ == "__main__":
 
     #Thread 3 to push the data to edge ie., local mysql database
     
-
+    thread3_push_to_edge = threading.Thread(target = edge_engine)
+    thread3_push_to_edge.start()
 
 
 

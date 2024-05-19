@@ -25,11 +25,12 @@ from time import sleep
 import random
 import time
 from queue import Queue
-import threading
+
 
 #create a queue to store random number
 
-sensor_data_queue = Queue()
+sensor_data_queue1 = Queue()
+sensor_data_queue2 = Queue()
 
 def generate_sensor_data():
     while True:
@@ -38,10 +39,12 @@ def generate_sensor_data():
 
         # ambientTemp = "{:.2f}".format(mlx.ambient_temperature)
         targetTemp = "{:.2f}".format(mlx.object_temperature)
-        sensor_data_queue.put((targetTemp, time.time()), timeout= 3)
-        print(sensor_data_queue.get(timeout= 3))
-        print(type(sensor_data_queue))
-        break
+        sensor_data_queue1.put((targetTemp, time.time()), timeout= 3)
+        sensor_data_queue2.put((targetTemp, time.time()), timeout= 3)
+        
+        # print(sensor_data_queue.get(timeout= 3))
+        # print(type(sensor_data_queue))
+        # break
 
         time.sleep(1)
 

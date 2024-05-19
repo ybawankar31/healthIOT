@@ -1,6 +1,8 @@
 import mysql.connector
 import time
-from sensor_code import sensor_data_queue
+import sensor_code
+import importlib
+
 
 db_host = "sql12.freesqldatabase.com"
 db_name = "sql12707409"
@@ -25,8 +27,7 @@ def cloud_engine():
 
         cursor = connection.cursor()
 
-
-        data_to_push = sensor_data_queue.get(timeout= 3)
+        data_to_push = sensor_code.sensor_data_queue1.get(timeout= 3)[0]
         time_to_push = time.time()
         # print(time_)
         data = [data_to_push, time_to_push]
