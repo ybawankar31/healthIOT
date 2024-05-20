@@ -24,12 +24,13 @@ class MainWin(QtWidgets.QMainWindow):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    obj = MainWin()
 
     #Thread 1 to get data from sensor and put it in queue
     thread1_sensor_pipeline = threading.Thread(target=generate_sensor_data)
     thread1_sensor_pipeline.start()
 
+    obj = MainWin()
+    
     #Thread 2 to push the data to cloud
 
     thread2_push_to_cloud = threading.Thread(target= cloud_engine)

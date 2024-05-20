@@ -16,7 +16,7 @@ from sensor_code import *
 #VALUES****TO REPRESENT IN THE WINDOW*************************************
 try:
     value_pc = sensor_data_queue3.get(timeout= 3)
-except Queue.empty:
+except Exception as e:
     value_pc = "Fetching"
 
 
