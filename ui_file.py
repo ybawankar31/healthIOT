@@ -7,28 +7,18 @@ from PyQt5.QtCore import QTime, Qt, QTimer
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-
 #******************************************************************
 
+from cloud_file import representation_value_cloud
+from edge_file import representation_value_edge
+from sensor_code import *
 
-#VALUES*************************************************************************
+#VALUES****TO REPRESENT IN THE WINDOW*************************************
+value_pc = sensor_data_queue3.get(timeout= 3)
+value_pe = sensor_data_queue4.get(timeout= 3)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+value_fc = representation_value_cloud.get(timeout= 3)
+value_fe = representation_value_edge.get(timeout=3)
 
 #*************************************************************************
 class Ui_MainWindow(object):
@@ -43,13 +33,19 @@ class Ui_MainWindow(object):
     def update_clock(self):
         # current_time = QTime.currentTime().toString('hh:mm:ss')
         # Update the text of the clock labels with the formatted current time
-        global time_
+        
 
-        self.time_pc.setText(f"Updated")
-        self.time_pe.setText(f"Updated")
-        self.time_fc.setText(f"Updated")
-        self.time_fe.setText("Nothing")
-        time_ = time.time()
+        self.temp_pc.setText(f"{value_pc[0]}")
+        self.time_pc.setText(f"{time.ctime(value_pc[1])}")
+        
+        self.temp_pe.setText(f"{value_pe[0]}")
+        self.time_pe.setText(f"{time.ctime(value_pe[1])}")
+        
+        self.temp_fc.setText(f"{value_fc[0]}")
+        self.time_fc.setText(f"{time.ctime(value_fc[1])}")
+        
+        self.temp_fe.setText(f"{value_fe[0]}")
+        self.time_fe.setText(f"{time.ctime(value_fe[1])}")
 
 
 
@@ -143,33 +139,6 @@ class Ui_MainWindow(object):
         
         self.temp_fe.setText(_translate("MainWindow", f"Fetching"))
         self.time_fe.setText(_translate("MainWindow", f"Fetching"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

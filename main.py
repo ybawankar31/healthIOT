@@ -40,8 +40,15 @@ if __name__ == "__main__":
     thread3_push_to_edge = threading.Thread(target = edge_engine)
     thread3_push_to_edge.start()
 
+    #Thread 4 to pull the data from edge into window. ie., local mysql database
+    
+    thread4_pull_from_edge = threading.Thread(target = edge_to_window)
+    thread4_pull_from_edge.start()
 
-
+    #Thread 5 to pull the data from cloud into window. ie., free sql database
+    
+    thread5_pull_from_cloud = threading.Thread(target = cloud_to_window)
+    thread5_pull_from_cloud.start()
     
 
 
