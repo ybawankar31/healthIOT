@@ -8,6 +8,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 from cloud_file import *
 from edge_file import *
+from sensor_code import *
 #************************************************************************
 #Thread 1 to get data from sensor and put it in queue
 thread1_sensor_pipeline = threading.Thread(target=generate_sensor_data)
