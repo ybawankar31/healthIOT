@@ -48,22 +48,22 @@ from sensor_code import *
 try:
     value_pc = sensor_data_queue3.get(timeout= 3)
 except Exception as e:
-    value_pc = "Fetching"
+    value_pc = ("Fetching", "Fetching")
 
 try:
     value_pe = sensor_data_queue4.get(timeout= 3)
 except Exception as e:
-    value_pe = "Fetching"
+    value_pe = ("Fetching", "Fetching")
 
 try:
     value_fc = representation_value_cloud.get(timeout= 3)
 except Exception as e:
-    value_fc = "Fetching"
+    value_fc = ("Fetching", "Fetching")
 
 try:
     value_fe = representation_value_edge.get(timeout=3)
 except Exception as e:
-    value_fe = "Fetching"
+    value_fe = ("Fetching", "Fetching")
 
 #*************************************************************************
 class Ui_MainWindow(object):
