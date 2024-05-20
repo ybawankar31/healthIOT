@@ -14,7 +14,12 @@ from edge_file import representation_value_edge
 from sensor_code import *
 
 #VALUES****TO REPRESENT IN THE WINDOW*************************************
-value_pc = sensor_data_queue3.get(timeout= 3)
+try:
+    value_pc = sensor_data_queue3.get(timeout= 3)
+except Queue.empty:
+    value_pc = "Fetching"
+
+
 value_pe = sensor_data_queue4.get(timeout= 3)
 
 value_fc = representation_value_cloud.get(timeout= 3)
