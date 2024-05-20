@@ -50,16 +50,16 @@ class Ui_MainWindow(object):
         
 
         self.temp_pc.setText(f"{value_pc[0]}")
-        self.time_pc.setText(f"{time.ctime(value_pc[1])}")
+        self.time_pc.setText(f"{time.ctime(float(value_pc[1]))}")
         
         self.temp_pe.setText(f"{value_pe[0]}")
-        self.time_pe.setText(f"{time.ctime(value_pe[1])}")
+        self.time_pe.setText(f"{time.ctime(float(value_pe[1]))}")
         
         self.temp_fc.setText(f"{value_fc[0]}")
-        self.time_fc.setText(f"{time.ctime(value_fc[1])}")
+        self.time_fc.setText(f"{time.ctime(float(value_fc[1]))}")
         
         self.temp_fe.setText(f"{value_fe[0]}")
-        self.time_fe.setText(f"{time.ctime(value_fe[1])}")
+        self.time_fe.setText(f"{time.ctime(float(value_fe[1]))}")
 
 
 
