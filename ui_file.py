@@ -173,18 +173,29 @@ class Ui_MainWindow(object):
         self.push.setText(_translate("MainWindow", "PUSH"))
         self.fetch.setText(_translate("MainWindow", "FETCH"))
 
-        self.temp_pc.setText(_translate("MainWindow", f"Fetching"))
-        self.time_pc.setText(_translate("MainWindow", f"Fetching"))
+        # self.temp_pc.setText(_translate("MainWindow", f"Fetching"))
+        # self.time_pc.setText(_translate("MainWindow", f"Fetching"))
         
-        self.temp_pe.setText(_translate("MainWindow", f"Fetching"))
-        self.time_pe.setText(_translate("MainWindow", f"Fetching"))
+        # self.temp_pe.setText(_translate("MainWindow", f"Fetching"))
+        # self.time_pe.setText(_translate("MainWindow", f"Fetching"))
         
-        self.temp_fc.setText(_translate("MainWindow", f"Fetching"))
-        self.time_fc.setText(_translate("MainWindow", f"Fetching"))
+        # self.temp_fc.setText(_translate("MainWindow", f"Fetching"))
+        # self.time_fc.setText(_translate("MainWindow", f"Fetching"))
         
-        self.temp_fe.setText(_translate("MainWindow", f"Fetching"))
-        self.time_fe.setText(_translate("MainWindow", f"Fetching"))
+        # self.temp_fe.setText(_translate("MainWindow", f"Fetching"))
+        # self.time_fe.setText(_translate("MainWindow", f"Fetching"))
 
+        self.temp_pc.setText(_translate("MainWindow", f"{value_pc[0]}"))
+        self.time_pc.setText(_translate("MainWindow", f"{value_pc[1]}"))
+        
+        self.temp_pe.setText(_translate("MainWindow", f"{value_pe[0]}"))
+        self.time_pe.setText(_translate("MainWindow", f"{value_pe[1]}"))
+        
+        self.temp_fc.setText(_translate("MainWindow", f"{value_fc[0]}"))
+        self.time_fc.setText(_translate("MainWindow", f"{value_fc[1]}"))
+        
+        self.temp_fe.setText(_translate("MainWindow", f"{value_fe[0]}"))
+        self.time_fe.setText(_translate("MainWindow", f"{value_fe[1]}"))
 
 
 
