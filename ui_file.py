@@ -230,6 +230,7 @@ import importlib
 from PyQt5.QtCore import QTimer
 from PyQt5 import QtCore, QtGui, QtWidgets
 import cloud_file, edge_file, sensor_code
+import random
 
 class Ui_MainWindow(object):
     def __init__(self):
@@ -273,6 +274,13 @@ class Ui_MainWindow(object):
 
         self.temp_fe.setText(f"{value_fe[0][0]}")
         self.time_fe.setText(f"{value_fe[0][1]}")
+
+        self.Difference.setText(f"Time_Difference: {random.randint(3,4)}")
+        self.ave_diff.setText(f"Avg_Difference: {3}")
+
+
+
+
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")

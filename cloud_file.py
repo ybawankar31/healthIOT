@@ -145,6 +145,8 @@ def cloud_engine():
 
         time.sleep(1)
 
+
+
 representation_value_cloud = Queue()
 
 def cloud_to_window():
