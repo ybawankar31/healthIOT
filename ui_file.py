@@ -229,6 +229,7 @@
 import importlib
 from PyQt5.QtCore import QTimer
 from PyQt5 import QtCore, QtGui, QtWidgets
+import cloud_file, edge_file, sensor_code
 
 class Ui_MainWindow(object):
     def __init__(self):
