@@ -81,9 +81,9 @@ if __name__ == "__main__":
 
     # Start the threads
     threading.Thread(target=sensor_code.generate_sensor_data).start()
-    threading.Thread(target=cloud_file.cloud_engine).start()
-    threading.Thread(target=edge_file.edge_engine).start()
-    threading.Thread(target=edge_file.edge_to_window).start()
-    threading.Thread(target=cloud_file.cloud_to_window).start()
+    threading.Thread(target=cloud_engine).start()
+    threading.Thread(target=edge_engine).start()
+    threading.Thread(target=edge_to_window).start()
+    threading.Thread(target=cloud_to_window).start()
 
     sys.exit(app.exec_())
