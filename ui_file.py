@@ -47,25 +47,25 @@ from edge_file import representation_value_edge
 from sensor_code import *
 
 #VALUES****TO REPRESENT IN THE WINDOW*************************************
-try:
-    value_pc = sensor_data_queue3.get(timeout= 3)
-except Exception as e:
-    value_pc = ("Fetching", "Fetching")
+# try:
+#     value_pc = sensor_data_queue3.get(timeout= 3)
+# except Exception as e:
+#     value_pc = ("Fetching", "Fetching")
 
-try:
-    value_pe = sensor_data_queue4.get(timeout= 3)
-except Exception as e:
-    value_pe = ("Fetching", "Fetching")
+# try:
+#     value_pe = sensor_data_queue4.get(timeout= 3)
+# except Exception as e:
+#     value_pe = ("Fetching", "Fetching")
 
-try:
-    value_fc = representation_value_cloud.get(timeout= 3)
-except Exception as e:
-    value_fc = ("Fetching", "Fetching")
+# try:
+#     value_fc = representation_value_cloud.get(timeout= 3)
+# except Exception as e:
+#     value_fc = ("Fetching", "Fetching")
 
-try:
-    value_fe = representation_value_edge.get(timeout=3)
-except Exception as e:
-    value_fe = ("Fetching", "Fetching")
+# try:
+#     value_fe = representation_value_edge.get(timeout=3)
+# except Exception as e:
+#     value_fe = ("Fetching", "Fetching")
 
 #*************************************************************************
 class Ui_MainWindow(object):
@@ -81,9 +81,30 @@ class Ui_MainWindow(object):
         # current_time = QTime.currentTime().toString('hh:mm:ss')
         # Update the text of the clock labels with the formatted current time
 
-        importlib.reload(cloud_file)
-        importlib.reload(edge_file)
-        importlib.reload(sensor_code)
+        # importlib.reload(cloud_file)
+        # importlib.reload(edge_file)
+        # importlib.reload(sensor_code)
+
+        try:
+            value_pc = sensor_data_queue3.get(timeout= 3)
+        except Exception as e:
+            value_pc = ("Fetching", "Fetching")
+
+        try:
+            value_pe = sensor_data_queue4.get(timeout= 3)
+        except Exception as e:
+            value_pe = ("Fetching", "Fetching")
+
+        try:
+            value_fc = representation_value_cloud.get(timeout= 3)
+        except Exception as e:
+            value_fc = ("Fetching", "Fetching")
+
+        try:
+            value_fe = representation_value_edge.get(timeout=3)
+        except Exception as e:
+            value_fe = ("Fetching", "Fetching")
+
 
         self.temp_pc.setText(f"{value_pc[0]}")
         self.time_pc.setText(f"{value_pc[1]}")
