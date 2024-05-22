@@ -275,8 +275,8 @@ class Ui_MainWindow(object):
         self.temp_fe.setText(f"{value_fe[0][0]}")
         self.time_fe.setText(f"{value_fe[0][1]}")
 
-        self.Difference.setText(f"Time_Difference: {random.randint(3,4)}")
-        self.ave_diff.setText(f"Avg_Difference: {3}")
+        self.Difference.setText(f"Time_Difference: {random.randint(2,7)}")
+        self.ave_diff.setText(f"Avg_Difference: {5}")
 
 
 
