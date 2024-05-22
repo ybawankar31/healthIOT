@@ -55,10 +55,10 @@ try:
 except Exception as e:
     value_pe = ("Fetching", "Fetching")
 
-# try:
-#     value_fc = representation_value_cloud.get(timeout= 3)
-# except Exception as e:
-#     value_fc = ("Fetching", "Fetching")
+try:
+    value_fc = representation_value_cloud.get(timeout= 3)
+except Exception as e:
+    value_fc = ("Fetching", "Fetching")
 
 try:
     value_fe = representation_value_edge.get(timeout=3)
@@ -86,11 +86,11 @@ class Ui_MainWindow(object):
         self.temp_pe.setText(f"{value_pe[0]}")
         self.time_pe.setText(f"{value_pe[1]}")
         
-        # self.temp_fc.setText(f"{value_fc[0]}")
-        # self.time_fc.setText(f"{value_fc[1]}")
+        self.temp_fc.setText(f"{value_fc[0][0]}")
+        self.time_fc.setText(f"{value_fc[0][1]}")
         
-        self.temp_fe.setText(f"{value_fe[0]}")
-        self.time_fe.setText(f"{value_fe[1]}")
+        self.temp_fe.setText(f"{value_fe[0][0]}")
+        self.time_fe.setText(f"{value_fe[0][1]}")
 
 
 
