@@ -26,7 +26,7 @@ def cloud_engine():
             exit()
 
         cursor = connection.cursor()
-
+        importlib.reload(sensor_code)
         data_to_push = sensor_code.sensor_data_queue1.get(timeout= 3)[0]
         time_to_push = sensor_code.sensor_data_queue1.get(timeout= 3)[1]
         # print(time_)
@@ -71,10 +71,10 @@ def cloud_to_window():
 
         cursor = connection.cursor()
 
-        data_to_push = sensor_code.sensor_data_queue1.get(timeout= 3)[0]
-        time_to_push = time.time()
-        # print(time_)
-        data = [data_to_push, time_to_push]
+        # data_to_push = sensor_code.sensor_data_queue1.get(timeout= 3)[0]
+        # time_to_push = time.time()
+        # # print(time_)
+        # data = [data_to_push, time_to_push]
 
 
         # sql_query = f"INSERT INTO temp_and_time (temp_instant, time_instant) VALUES (%s, %s); "  # Replace with your desired table
