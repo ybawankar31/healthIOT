@@ -81,9 +81,9 @@ class Ui_MainWindow(object):
         # current_time = QTime.currentTime().toString('hh:mm:ss')
         # Update the text of the clock labels with the formatted current time
 
-        # importlib.reload(cloud_file)
-        # importlib.reload(edge_file)
-        # importlib.reload(sensor_code)
+        importlib.reload(cloud_file)
+        importlib.reload(edge_file)
+        importlib.reload(sensor_code)
 
         try:
             value_pc = sensor_data_queue3.get(timeout= 3)
