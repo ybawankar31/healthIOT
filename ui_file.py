@@ -335,6 +335,7 @@ class Ui_MainWindow(object):
         self.time_fe = QtWidgets.QLabel(MainWindow)
         self.time_fe.setGeometry(QtCore.QRect(920, 360, 400, 34))
         self.time_fe.setObjectName("time_fe")
+        self.timer.start(1000)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
