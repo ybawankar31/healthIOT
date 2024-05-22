@@ -13,7 +13,7 @@ import sensor_code
 import importlib
 #************************************************************************
 #Thread 1 to get data from sensor and put it in queue
-thread1_sensor_pipeline = threading.Thread(target=generate_sensor_data)
+thread1_sensor_pipeline = threading.Thread(target=sensor_code.generate_sensor_data)
 thread1_sensor_pipeline.start()
 
 
