@@ -275,8 +275,8 @@ class Ui_MainWindow(object):
         self.temp_fe.setText(f"{value_fe[0][0]}")
         self.time_fe.setText(f"{value_fe[0][1]}")
 
-        self.Difference.setText(f"Time_Difference: {random.randint(2,7)}")
-        self.ave_diff.setText(f"Avg_Difference: {5}")
+        # self.Difference.setText(f"Time_Difference: {random.randint(2,7)}")
+        # self.ave_diff.setText(f"Avg_Difference: {5}")
 
 
 
@@ -303,12 +303,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
-        self.Difference = QtWidgets.QLabel(self.verticalLayoutWidget_3)
-        self.Difference.setObjectName("Difference")
-        self.verticalLayout_6.addWidget(self.Difference)
-        self.ave_diff = QtWidgets.QLabel(self.verticalLayoutWidget_3)
-        self.ave_diff.setObjectName("ave_diff")
-        self.verticalLayout_6.addWidget(self.ave_diff)
+        # self.Difference = QtWidgets.QLabel(self.verticalLayoutWidget_3)
+        # self.Difference.setObjectName("Difference")
+        # self.verticalLayout_6.addWidget(self.Difference)
+        # self.ave_diff = QtWidgets.QLabel(self.verticalLayoutWidget_3)
+        # self.ave_diff.setObjectName("ave_diff")
+        # self.verticalLayout_6.addWidget(self.ave_diff)
         self.push = QtWidgets.QLabel(MainWindow)
         self.push.setGeometry(QtCore.QRect(10, 100, 67, 17))
         self.push.setObjectName("push")
@@ -353,8 +353,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "HealthIOT"))
         self.label_cloud.setText(_translate("MainWindow", "Cloud Layer"))
         self.edge_label.setText(_translate("MainWindow", "Edge Layer"))
-        self.Difference.setText(_translate("MainWindow", "Time Difference: "))
-        self.ave_diff.setText(_translate("MainWindow", "Average Time Difference: "))
+        # self.Difference.setText(_translate("MainWindow", "Time Difference: "))
+        # self.ave_diff.setText(_translate("MainWindow", "Average Time Difference: "))
         self.push.setText(_translate("MainWindow", "PUSH"))
         self.fetch.setText(_translate("MainWindow", "FETCH"))
 
