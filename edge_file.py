@@ -166,7 +166,7 @@ def edge_to_window():
 
         cursor = connection.cursor()
 
-        sql_query = f"SELECT * FROM temp_and_time ORDER BY time_instant LIMIT 1;"
+        sql_query = f"SELECT * FROM temp_and_time ORDER BY time_instant DESC LIMIT 1;"
         cursor.execute(sql_query)
 
         result = cursor.fetchall()

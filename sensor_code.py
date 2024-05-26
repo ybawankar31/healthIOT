@@ -75,10 +75,12 @@ def generate_sensor_data():
         except Exception as e:
             print("Error reading sensor:", e)
             targetTemp = "Error"
+            print(targetTemp)
 
         timestamp = time()
         for queue in [sensor_data_queue1, sensor_data_queue2, sensor_data_queue3, sensor_data_queue4]:
             queue.put((targetTemp, timestamp), timeout=3)
+
 
         sleep(1)
 

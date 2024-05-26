@@ -105,9 +105,9 @@ import sensor_code
 from queue import Queue
 
 db_host = "sql12.freesqldatabase.com"
-db_name = "sql12707409"
-db_user = "sql12707409"
-db_password = "RGDhTdT1Iz"
+db_name = "sql12709328"
+db_user = "sql12709328"
+db_password = "a4n8y55D2F"
 
 # Connect to the database
 def cloud_engine():
